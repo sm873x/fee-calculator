@@ -11,11 +11,9 @@
  * This function is called each time a button is clicked. You must decide what
  * to do in each case (most likely call another function).
  *
- * @param  {HTMLElement} element The button that was clicked on... use element.value to get that button's value attribute
+ * @param  {String} buttonValue   The value of the button that was clicked on, for example "6" or "+"
  */
-function handleButtonClick(element) {
-    // You can use this to get the value of the button: element.value
-    // For example, if the user clicked on the "6" button, element.value would equal "6"
+function handleButtonClick(buttonValue) {
 
     // TODO: WRITE SOME OF YOUR CODE HERE
 
@@ -103,7 +101,7 @@ document.querySelector('.run-tests').addEventListener('click', function() {
  */
 [].slice.call(document.querySelectorAll('button')).forEach(function(element) {
     element.addEventListener('click', function() {
-        handleButtonClick(this);
+        handleButtonClick(this.value);
     });
 });
 
